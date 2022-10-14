@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS GRID3</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 250px);
+        gap: 20px;
+        grid-template-areas:
+          "a a b b"
+          "c d b d"
+          "e e e e";
+      }
+      .container > div {
+        /* height: 100px;
+        width: 100px; */
+        background-color: rgb(46, 44, 44);
+        color: white;
+        font-size: 70px;
+        border-radius: 10px;
+      }
+
+      .container > div:nth-child(1) {
+        grid-area: a;
+      }
+      .container > div:nth-child(2) {
+        grid-area: b;
+      }
+      .container > div:nth-child(3) {
+        grid-area: c;
+      }
+      .container > div:nth-child(4) {
+        grid-area: d;
+      }
+      .container > div:nth-child(5) {
+        grid-area: e;
+        /* height: 300px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="datetime-local">
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+      <div>D</div>
+      <div>E</div>
+    </div>
+  </body>
+</html>
+
+<script src="index.js"></script>
